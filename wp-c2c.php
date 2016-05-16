@@ -28,3 +28,10 @@ Author:      Marco Zink
 Author URI:  https://marcozink.com
 License:     MIT
 */
+
+add_action('admin_menu', 'c2c_menu_pages');
+
+function c2c_menu_pages(){
+	add_menu_page( 'Click 2 Call', 'Click2Call', 'manage_options', 'c2c', 'c2c_menu_output');
+	add_submenu_page( 'c2c', 'Asterisk' , 'Asterisk', 'manage_options', 'asterisk');
+}
