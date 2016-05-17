@@ -33,5 +33,12 @@ add_action('admin_menu', 'c2c_menu_pages');
 
 function c2c_menu_pages(){
 	add_menu_page( 'Click 2 Call', 'Click2Call', 'manage_options', 'c2c', 'c2c_menu_output');
-	add_submenu_page( 'c2c', 'Asterisk' , 'Asterisk', 'manage_options', 'asterisk');
+	add_submenu_page( 'c2c', 'Asterisk' , 'Asterisk', 'manage_options', 'c2c-asterisk');
+	add_submenu_page( 'c2c', 'Form' , 'Forms', 'manage_options', 'c2c-forms');
 }
+
+
+echo "<div class='wrap'>";
+echo "<h2>WordPress Click2Call</h2>";
+echo "</div>";
+
